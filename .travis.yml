@@ -1,0 +1,8 @@
+language: objective-c
+osx_image: xcode7.2
+
+install: 
+  - git clone https://github.com/TheHolyGrail/Excalibur.git ../Excalibur
+  - git clone https://github.com/TheHolyGrail/Swallow.git ../Swallow --branch v2.1.1
+script:
+   - xctool -project THGCache.xcodeproj -scheme THGCache -sdk iphonesimulator build test
